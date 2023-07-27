@@ -1,0 +1,824 @@
+body{
+   font-family: 'Raleway', sans-serif;
+   font-size: 16px;
+
+   margin: 0;
+   color: black;
+}
+
+button{
+   cursor: pointer;
+}
+
+a, button{ 
+   pointer-events: none; 
+   cursor: default; 
+   text-decoration: none; 
+   color: #000000; 
+} 
+
+.background{
+   background: rgba(110, 156, 159, 0.95);
+   position: relative;
+}
+
+.opasyti{
+   opacity: 0.2;
+}
+
+.callorder{
+   display: inline-flex;
+   padding: 70px;
+   flex-direction: column;
+   align-items: center;
+   gap: 35px;
+   border: 0;
+   background-color: white;
+   z-index: 9999;
+   position: fixed;
+   width: 717px;
+   height: 238px;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   margin: auto;
+}
+
+.callorder h1{
+   font-size: 25px;
+   font-weight: 500;
+   line-height: 35px;
+}
+
+.submit{
+   width: 165px;
+   height: 60px;
+
+   text-align: center;
+
+   padding: 20px;
+   color: white;
+   border: 0;
+   background: var(--cta, #6E9C9F);
+   cursor: pointer;
+}
+
+.submit:hover{
+   background-color: #509498;
+}
+
+.close{
+   top: 30px;
+   right: 30px;
+   position: absolute;
+   width: 15px;
+   height: 15px;
+
+   cursor: pointer;
+   background: url('/images/form/Close.svg') no-repeat center;
+   background-size: cover;
+   pointer-events: all;
+}
+
+*{
+   transition: all 0.2s linear;
+}
+
+*, 
+*::after, 
+*::before{
+   box-sizing: border-box;
+}
+
+a{
+   margin: 0;
+   text-decoration: none;
+   color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+   margin: 0;
+}
+
+p{
+   margin: 0;
+}
+
+.page{
+   width: 100%;
+   height: 100vh;
+}
+
+.container{
+   width: 100%;
+   max-width: 1210px;
+   margin: 0 auto;
+   padding: 0 50px;
+   text-align: center;
+   overflow: hidden;
+}
+
+.main{
+   display: flex;
+   flex-direction: column;
+   gap: 100px;
+   background: linear-gradient(to left, #F1EADC 50%, transparent 50%);
+}
+
+/* === Header === */
+
+.header-content{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   align-content: center;
+
+   margin-top: 50px;
+   gap: 15px;
+}
+
+/* logo */
+
+.header-logo{
+   display: inline-flex;
+}
+
+.header-logo a{
+   display: inline-flex;
+   gap: 11px;
+   align-items: center;   
+}
+
+.header-logo-title{
+   text-transform: uppercase;
+   font-size: 16px;
+   font-weight: 500;
+}
+
+/* nav */
+
+.header-link{
+   display: inline-flex;
+   flex-wrap: wrap;
+   gap: 45px;
+}
+
+.header-link a{
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 21px;
+}
+
+.header-link span{
+   color: #6E9C9F;
+}
+
+/* tel */
+
+.header-tel{
+   display: inline-flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+.header-tel a{
+   display: flex;
+   align-items: center;
+
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 21px;   
+}
+
+.img-tel{
+   display: inline-flex;
+   width: 17px;
+   height: 17px;
+   background: url('/images/header/telephone.svg') no-repeat center;
+   background-size: cover;
+
+   transition: background 0.2s linear;
+}
+
+/* === main === */
+.info-main{
+   display: inline-flex;
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: center;
+   align-items: center;
+}
+
+.info-text{
+   width: 563px;
+   display: inline-flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   margin-bottom: 100px;
+   gap: 50px;
+}
+
+.info-title{
+   display: inline-flex;
+   flex-direction: column;
+   gap: 45px;
+}
+
+.info-title h1{
+   text-align: left;
+   font-size: 55px;
+   font-weight: 500;
+   line-height:  60.5px
+}
+
+.info-title h2{
+   text-align: right;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 28px;
+
+   width: 385px;
+}
+
+.open-shop{
+   display: inline-flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+.buttons{
+   display: inline-flex;
+   margin-bottom: 100px;
+}
+
+.open-shop button:nth-child(1){
+   border: 0;
+   width: 67px;
+   height: 67px;
+   cursor: pointer;
+   background: url('/images/main/pointer.svg') no-repeat center;
+   background-size: cover;
+}
+
+.open-shop button:nth-child(2){
+   border: 0;
+   width: 243px;
+   height: 68px;
+   padding: 22px 50px;
+
+   color: white;
+   background-color: #6E9C9F;
+   cursor: pointer;
+
+   transition: background-color 0.2s linear;
+}
+
+.slaider{
+   display: flex;
+   flex-direction: row;
+   gap: 12px;
+}
+
+.slider-item{
+   width: 30px;
+   height: 4px;
+   background-color: #D1D1D1;
+   border-radius: 2px;
+}
+
+.woman{
+   right: 0px;
+   display: inline-flex;
+   position: relative;
+   top: -60px;
+   justify-content: center;
+   align-items: center;
+
+   width: 650px;
+}
+
+.woman1{
+   position: absolute;
+   left: -7px;
+   bottom: -100px;
+}
+
+.woman2{
+   position: absolute;
+   right: 0px;
+   top: 105px;
+}
+
+/* === col === */
+.new-collection{
+   display: inline-flex;
+   flex-direction: column;
+   margin: 160px 0;
+   gap: 70px;
+}
+
+.new-collection h1{
+   display: inline-flex;
+   font-size: 40px;
+   font-weight: 500;
+
+   margin-bottom: 90px;
+}
+
+.product{
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+
+.new-collection button{
+   display: inline-flex;
+   width: 243px;
+   height: 68px;
+   padding: 22px 50px;
+   justify-content: center;
+   align-items: center;
+
+   color: #6E9C9F;
+   background-color: white;
+   border: 1px solid #6E9C9F;
+}
+
+.products-item{
+   display: inline-flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+.photo{
+   width: 367px;
+   height: 551px;
+}
+
+.photo1{
+   background: url('/images/main/new-collection/1.jpg') center;
+   background-size: cover;
+}
+
+.photo2{
+   background: url('/images/main/new-collection/2.jpg') center;
+   background-size: cover;
+}
+
+.photo3{
+   background: url('/images/main/new-collection/3.jpg') center;
+   background-size: cover;
+}
+
+.products-item h2{
+   text-align: center;
+   gap: 1px;
+}
+
+.products-item h2:last-child{
+   color: #998E78;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 21px;
+}
+
+.poduct-text{
+   display: inline-flex;
+   flex-direction: column;
+   gap: 7px;
+}
+
+.collection-button{
+   display: inline-flex;
+   justify-content: center;
+}
+
+.collection-button button{
+   transition: background-color 0.2s linear;
+}
+
+/* === quality === */
+.quality{
+   text-align: left;
+}
+
+.quality h1{
+   margin-bottom: 91px;
+   font-size: 40px;
+   font-weight: 500;
+   line-height:  44px;
+   text-align: left;
+}
+
+.quality-main{
+   display: flex;
+   flex-direction: row;
+   text-align: left;
+   justify-content: space-between;
+   /* flex-wrap: wrap; */
+
+   margin-bottom: 130px;
+}
+
+.quality-item{
+   display: inline-flex;
+   flex-direction: column;
+   align-items: flex-start;
+
+   padding-bottom: 20px;
+   gap: 37px;
+}
+
+.quality-item h2{
+   font-size: 25px;
+   font-weight: 500;
+   line-height: 35px;
+   }
+
+.quality-item p{
+   font-size: 17px;
+   font-weight: 500;
+   line-height: 35px;
+}
+
+.quality-item img{
+   width: 67px;
+   height: 67px;
+}
+
+
+/* === team === */
+.team-womazing{
+   display: flex;
+   flex-direction: column;
+   gap: 91px;
+
+   margin-bottom: 130px;
+}
+
+.team-title{
+   font-size: 40px;
+   font-weight: 500;
+   line-height: 44px;
+   
+   text-align: left;
+}
+
+.team-main{
+   display: inline-flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 64px;
+}
+
+.photo-block{
+   display: flex;
+   gap: 15px;
+}
+
+.team-photo{
+   display: flex;
+   align-items: flex-end;
+   width: 780px;
+   height: 488px;
+
+   background: url('/images/main/team/1.jpg') center no-repeat;
+   background-size: cover;
+}
+
+.slider-block{
+   margin: 0 auto;
+   display: inline-flex;
+   margin-bottom: 60px;
+   gap: 12px;
+}
+
+.team-text{
+   display: inline-flex;
+   flex-direction: column;
+   align-items: flex-start;
+   text-align: left;
+   gap: 28px;
+}
+
+.team-text h1{
+   font-size: 25px;
+   font-weight: 500;
+   line-height: 35px;
+
+   padding: 0;
+}
+
+.team-text p{
+   width: 255px;
+   font-size: 17px;
+   font-weight: 500;
+   line-height: 23.8px;
+}
+
+.team-text a{
+   color: #6E9C9F;
+   font-size: 17px;
+   font-weight: 500;
+   line-height: 23.8px;
+}
+
+/* === footer === */
+footer{
+   padding: 70px 0;
+   background-color: #F1EADC;
+}
+
+.footer-content{
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.footer-tel{
+   display: inline-flex;
+   flex-direction: column;
+   align-items: flex-end;
+   gap: 9px;
+}
+
+/* footer-main */
+.footer-main p{
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 23px;
+   text-align: left;
+}
+
+.cloth{
+   display: inline-flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 10px;
+}
+
+.cloth a{
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 18px;
+}
+
+.social{
+   display: inline-flex;
+   flex-direction: column;
+   gap: 30px;
+   align-items: end;
+   justify-content: center;
+}
+
+.social-link{
+   display: inline-flex;
+   flex-direction: row;
+   gap: 12px;
+}
+
+
+/* === hover === */
+
+.header-link a:hover{
+   text-decoration: underline;
+}
+
+.cloth a:hover{
+   text-decoration: underline;
+}
+
+.open-shop button:nth-child(2):hover{
+   background-color: #509498;
+}
+
+.collection-button button:hover{
+   color: white;
+   background-color: #6E9C9F;
+}
+
+.img-tel:hover{
+   background: url('/images/header/telephone1.svg');
+   background-color: #6E9C9F;
+}
+
+.color:hover{
+   background: url('/images/main/new-collection/Vector2.svg') no-repeat center;
+   background-color:  #6E9C9F;
+}
+
+.products-item a:hover{
+   opacity: 0.4;
+}
+
+
+@media (max-width:1300px) {
+   .info-main{
+      flex-wrap: wrap;
+   }
+
+   .header-link{
+      gap: 10px;
+      justify-content: center;
+   }
+
+   .product{
+      /* flex-direction: column; */
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .footer-tel{
+      align-items: flex-start;
+   }
+   
+   .open-shop{
+      align-items: center;
+   }
+
+   .team-main{
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .team-photo{
+      width: 570px;
+      height: 390px;
+   }
+}
+
+@media (max-width:800px) {
+   .info-title{
+      text-align: center;
+      align-items: center
+   }
+
+   .info-title h1{
+      text-align: center;
+   }
+   .info-title h2{
+      text-align: center;
+   }
+
+   .buttons{
+      margin-bottom: 20px;
+   }
+
+   .woman{
+      width: auto;
+   }
+
+   .woman .woman1, .woman2{
+      display: none;
+   }
+   .team-photo{
+      width: 500px;
+      height: 390px;
+   }
+
+   .callorder{
+      width: 480px;
+   }
+
+   .quality-main{
+      flex-wrap: wrap;
+   }
+}
+
+@media (max-width:650px) {
+
+   .info-text{
+      align-items: flex-start;
+      width: auto;
+      height: auto;
+   }
+
+   .info-title{
+      align-items: flex-start;
+      width: auto;
+   }
+   .info-title h1{
+      font-size: 30px;
+      text-align: left;
+   }
+   .info-title h2{
+      text-align: left;
+      width: auto;
+   }
+
+   .woman *{
+      width: 250px;
+      /* display: none; */
+   }
+
+   .photo{
+      width: 300px;
+   }
+
+   .new-collection{
+      align-items: center;
+   }
+
+   .new-collection h1{
+      align-items: center;
+      font-size: 30px;
+   }
+
+   .quality-item{
+      width: auto;
+      align-items: center;
+   }
+
+   .team-photo{
+      width: 400px;
+      height: 360px;
+   }
+
+   .callorder{
+      width: 380px;
+      height: 265px;
+   }
+}
+
+@media (max-width:500px) {
+   .team-photo{
+      width: 300px;
+      height: 360px;
+
+      background-size: contain;
+   }
+
+   .callorder{
+      width: 380px;
+      height: 265px;
+   }
+
+}
+
+@media (max-width:375px) {   
+   .container{
+      padding: 0;
+   }
+
+   .container:first-child{
+      padding: 0 50px;
+   }
+
+   .open-shop button::nth-child(1){
+   width: 67px;
+   height: 67px;
+   }
+
+   .open-shop button:nth-child(2){
+      width: 200px;
+      height: 68px;
+   }
+
+   .woman *{
+      width: 250px;
+      /* display: none; */
+   }
+
+   .header-link{
+      justify-content: flex-start;
+      gap: 7px;
+   }
+
+   .new-collection h1{
+      font-size: 20px;
+   }
+
+   .photo{
+      width: 250px;
+   }
+
+   .quality-main{
+      text-align: center;
+   }
+
+   .photo-block{
+      display: none;
+      width: 250px;
+      height: 300px;
+
+      background-size: cover;
+   }
+
+   .team-title{
+      text-align: center;
+      padding: 0;
+   }
+
+   .callorder{
+      width: 380px;
+      height: 265px;
+   }
+}
+
