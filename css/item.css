@@ -303,6 +303,13 @@ p{
    gap: 1px;
 }
 
+.products-item h2:last-child {
+   color: #998E78;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 21px;
+}
+
 .poduct-text{
    display: inline-flex;
    flex-direction: column;
