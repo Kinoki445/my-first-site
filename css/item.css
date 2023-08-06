@@ -212,11 +212,22 @@ p{
    gap: 34px;
 }
 
+.click{
+   background-color: black;
+   color: white;
+}
+
+.color-click{
+   border: 1px solid black !important;
+}
+
 .circle{
    width: 41px;
    height: 41px;
    border: 0;
    border-radius: 100px;
+
+   transition: border .2s linear;
 }
 
 .brown{
@@ -381,6 +392,15 @@ footer{
 .color:hover{
    background: url('/images/main/new-collection/Vector2.svg') no-repeat center;
    background-color:  #6E9C9F;
+}
+
+.color-button:hover{
+   background-color: black;
+   color: white;
+}
+
+.circle:hover{
+   border: 1px solid black !important;
 }
 
 .button:hover{
